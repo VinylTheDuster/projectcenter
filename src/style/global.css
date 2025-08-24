@@ -71,3 +71,20 @@ body {
 .contact-item h3 {
     color: darkgrey;
 }
+
+/* product */
+#product-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2em;
+}
+
+.product-item {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    background-color: rgba(154, 154, 154, 0.785);
+    width: 10em;
+    padding: 1em;
+    align-items: start;
+}
