@@ -31,7 +31,6 @@ body {
     color: white;
     justify-content: space-between;
     align-items: center;
-    
 }
 
 /* counter */
@@ -39,4 +38,36 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+/* contact manager */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items: center;
+    margin-bottom: 5em;
+}
+
+.contact-form input {
+    width: 10%;
+    text-align: center;
+}
+
+#contact-show {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+}
+
+.contact-item {
+    border: solid 0.2em;
+    width: fit-content;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-item h3 {
+    color: darkgrey;
 }
