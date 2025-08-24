@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Todolist - MyProjects</title>
+    <link rel="stylesheet" href="../../style/global.css">
+  </head>
+  <body>
+    <script src="./scripts/todologic.js" defer></script>
+    <section class="main-container">
+        <div>
+            <h3>Specify the task to add</h3>
+            <label for="todoinput">Task:</label>
+            <input type="text" id="todoinput" placeholder="Get the trash out."><br><br>
+            <button onclick="addTaskToArray()" id="todosubmit">
+              Submit
+            </button>
+        </div>
+
+        <div id="todocontainer">
+          
+        </div>
+    </section>
+  </body>
+</html>

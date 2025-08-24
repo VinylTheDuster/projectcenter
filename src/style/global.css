@@ -1,0 +1,35 @@
+/* import font */
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap');
+
+body {
+    font-family: "Arimo", sans-serif;
+}
+
+/* global style */
+.main-container {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 2.5%;
+}
+
+/* todolist */
+#todocontainer {
+    display: flex;
+    flex-direction: column;
+    background: #00000045;
+    padding: 5em;
+    margin-top: 5%;
+    margin-right: 15%;
+    align-items: center;
+}
+
+.todoitem {
+    display: flex;
+    width: 100%;
+    padding: 1%; margin-top: 1%;
+    background-color: dimgray;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+    
+}
