@@ -22,15 +22,12 @@ const library = [
 ];
 
 const booksList = document.getElementById('booksList');
+
+const searchInput = document.getElementById('search-input');
 const searchBtn = document.getElementById('search-button');
 
-// ajoute les events listeners
-function initializeEventsListener () {
-
-  searchBtn.addEventListener('click', () => searchPrerogative());
-}
-
-initializeEventsListener();
+// ajoute un event listener au bouton de recherche
+searchBtn.addEventListener('click', () => searchPrerogative());
 
 // enclenche une série de fonction pour déterminer le résultat de recherche
 function searchPrerogative () {
@@ -52,8 +49,29 @@ function searchPrerogative () {
   } else {
   }
 
+  if (searchInput.value !== undefined || null || '') {
+
+    libraryTemp = searchInBooks(searchInput.value, libraryTemp);
+    console.log(searchInput);
+  }
+
   initializeBooksList(libraryTemp);
 
+}
+
+// à corriger ( problème avec let, map renvois des objets, pas des tables, faut enlever
+// map et commencer direct par filter puis traiter séparément title et author
+function searchInBooks(searchValue, libraryTemp) {
+
+    searchValue = searchValue.toLowerCase();
+
+    let newLibraryTemp = libraryTemp.filter(x => 
+        x.title.toLowerCase().includes(searchValue) || 
+        x.author.toLowerCase().includes(searchValue) ||
+        x.year.toString().includes(searchValue)
+    );
+
+  return newLibraryTemp;
 }
 
 // retourne un tableau avec tout les objets contenants un livre disponible
@@ -120,13 +138,14 @@ function filterBooks(bookArray, valueOrder) {
   return filteredBooksTemp;
 }
 
-// Affiche les infos de livres en fonction de l'array bookArray (donc appeler la fonction avec un array traiter)
+// Affiche les infos de livres en fonction de l'array 
+// bookArray (donc appeler la fonction avec un array traiter)
 function initializeBooksList (bookArray) {
 
   booksList.textContent = "";
 
-  bookArray.map(x => booksList.innerHTML += 
-    `<div class="book-item">
+  bookArray.forEach(x => booksList.innerHTML += 
+    `<div id="child" class="book-item">
 
                 <div>
                     <p>Titre : ${x.title}</p>
@@ -145,6 +164,15 @@ function initializeBooksList (bookArray) {
                 </div>
             </div>`
   );
+
+  let parent = document.querySelector("#booksList");
+  let childs = document.querySelector("#child");
+
+  if (!parent.contains(childs)) {
+    booksList.innerHTML += `
+    <h2 class="book-item">Rien ne correspond à vos critères !</h2>
+    `;
+  }
 }
 
 initializeBooksList(library);
