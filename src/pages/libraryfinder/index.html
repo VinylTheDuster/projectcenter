@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>SimpleCalculator - MyProjects</title>
+    <link rel="stylesheet" href="../../style/global.css">
+  </head>
+  <body>
+    <script src="./scripts/libraryfinderlogic.js" defer></script>
+    <section class="main-container">
+
+        <div>
+            <h2>Book Finder</h2>
+        </div>
+
+        <div class="finder-container">
+            <input type="text" id="searchname">
+
+            <select name="filter" id="filter-select">
+                <option value="">--Choisissez l'ordre de tri--</option>
+                <option value="nameUp">Nom croissant</option>
+                <option value="nameDown">Nom décroissant</option>
+                <option value="authorUp">Auteur croissant</option>
+                <option value="authorDown">Auteur décroissant</option>
+                <option value="yearUp">Année croissante</option>
+                <option value="yearDown">Année décroissante</option>
+            </select>
+
+            <label for="availableBooks">Disponible :</label>
+            <input id="availableBooks" type="checkbox">
+
+            <button id="search-button">Rechercher</button>
+        </div>
+
+        <div class="book-container" id="booksList">
+
+        </div>
+    </section>
+  </body>
+</html>
+

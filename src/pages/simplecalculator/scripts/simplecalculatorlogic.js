@@ -77,6 +77,7 @@ function calculateOperationContainer() {
     }
 
     operationString = operationString.replaceAll(',', ' ');
+    // attention : n'accepte que les chiffres, il faut supprimer les espaces pour faire des nombres sinon erreur
 
     result = eval(operationString);
 
