@@ -178,3 +178,51 @@ body {
     padding-right: 2em;
     width: 50%;
 }
+
+/* Better To-do List */
+.card-options {
+    display: flex;
+    flex-direction: row;
+    gap: 5em;
+}
+
+.card-options textarea {
+    resize: none;
+}
+
+.card-option-addCard {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    margin-top: 2em;
+    width: fit-content;
+}
+
+.card-option-removeCategory {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    margin-top: 2em;
+    width: fit-content;
+}
+
+.card-option-item {
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+    justify-content: space-between;
+}
+
+.card-filter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.card-filter h4 {
+    margin: 0em;
+}
+
+.card-array {
+    
+}

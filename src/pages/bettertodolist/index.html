@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Better To-do List - MyProjects</title>
+    <link rel="stylesheet" href="../../style/global.css">
+  </head>
+  <body>
+    <script src="./scripts/bettertodolistlogic.js" defer></script>
+    <main class="main-container">
+
+        <div>
+
+          <h1>Better To-do List</h1>
+          <h3>Une nouvelle version de ma To-Do list</h3>
+
+          <div class="card-options">
+
+            <div>
+
+              <div>
+                <button>+ Ajouter une carte</button>
+              </div>
+
+              <div class="card-option-addCard">
+                <div class="card-option-item">
+                  <label for="addCard-title">Nom de la carte</label>
+                  <input type="text" id="addCard-title">
+                </div>
+                <div class="card-option-item">
+                  <label for="addCard-desc">Description</label>
+                  <textarea rows="4" cols="35" id="addCard-desc"></textarea>
+                </div>
+                <div class="card-option-item">
+                  <label for="">Categorie</label>
+                  <select name="" class="option-category" id="addCard-category">
+                  </select>
+                </div>
+                <div class="card-option-item">
+                  <label for="">Prioritée</label>
+                  <select name="" id="addCard-priority">
+                    <option value="">--Choisissez une prioritée--</option>
+                    <option value="low">Basse</option>
+                    <option value="mid">Moyenne</option>
+                    <option value="high">Haute</option>
+                    <option value="important">Importante</option>
+                  </select>
+                </div>
+                <div>
+                  <button id="addCard-submit">Ajouter la carte</button>
+                </div>
+              </div>
+            </div>
+
+            <div>
+
+              <div>
+                <button>+ Ajouter/Supprimer une catégorie</button>
+              </div>
+
+              <div class="card-option-removeCategory">
+
+                <div class="card-option-item">
+                  <label for="">Nom de la catégorie</label>
+                  <input type="text" id="addCat-title">
+                  <button id="addCat-submit">Ajouter</button>
+                </div>
+
+                <div class="card-option-item">
+                  <label for="">Catégorie</label>
+                  <select name="" class="option-category" id="delCat-title">
+                  </select>
+                  <button id="delCat-submit">A supprimer</button>
+                </div>
+              </div>
+            </div>
+
+            <div>
+
+              <div>
+                <button>+ Options & Info</button>
+              </div>
+
+              <div>
+                <p>Il restes X tâches non terminées !</p>
+              </div>
+
+              <br>
+
+              <div>
+                <button>Supprimer toute les cartes</button>
+                <p>Attention : Cette action est définitive !</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <hr>
+
+        <div id="card-container">
+
+          <div class="card-filter">
+            <h4>Filtre :</h4>
+
+            <div>
+              <label for="">Par catégorie :</label>
+              <select name="" class="option-category" id="">
+              </select>
+            </div>
+
+            <div>
+              <label for="">Par prioritée :</label>
+              <select name="" id="">
+                <option value="">--Choisissez une prioritée--</option>
+                <option value="low">Basse</option>
+                <option value="mid">Moyenne</option>
+                <option value="high">Haute</option>
+                <option value="important">Importante</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="">Par statut :</label>
+              <select name="" id="">
+                <option value="">--Choisissez un statut--</option>
+                <option value="">Active</option>
+                <option value="">Inactive</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="">Trier par ordre :</label>
+              <select name="" id="">
+                <option value="">--Choisissez un triage--</option>
+                <option value="">Alphabetique ascendant</option>
+                <option value="">Alphabetique descendant</option>
+                <option value="">Prioritée ascendante</option>
+                <option value="">Prioritée descendante</option>
+                <option value="">Date d'ajout ascendante</option>
+                <option value="">Date d'ajout descendante</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="card-array">
+
+          </div>
+
+        </div>
+    </main>
+  </body>
+</html>
