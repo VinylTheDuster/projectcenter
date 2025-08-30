@@ -180,6 +180,24 @@ body {
 }
 
 /* Better To-do List */
+.card-main-container button, input, select, textarea {
+    transition: 200ms;
+    border-radius: 0.7em;
+    padding: 0.2em;
+    padding-left: 0.8em;
+    padding-right: 0.8em;
+}
+
+.card-main-container button:hover, input:hover, select:hover, textarea:hover {
+    transition: 200ms;
+    background-color: rgb(216, 216, 216);
+}
+
+.card-main-container button:active, input:active, select:active, textarea:active {
+    transition: 50ms;
+    background-color: rgb(236, 236, 236);
+}
+
 .card-options {
     display: flex;
     flex-direction: row;
@@ -224,5 +242,88 @@ body {
 }
 
 .card-array {
-    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 1em;
+    padding-top: 7em;
+    justify-content: space-between;
+    gap: 3em;
+}
+
+.card-item {
+    position: relative;
+    border: solid 3px;
+    border-radius: 1em;
+    width: 25em;
+    height: fit-content;
+}
+
+.card-item span {
+    position: absolute;
+    font-size: 0.8em;
+    top: 0.5em;
+    right: 1em;
+}
+
+.card-item span:hover {
+    cursor: pointer;
+}
+
+.card-item h3 {
+    position: relative;
+    left: 1em;
+    bottom: 0.65em;
+    margin: 0em;
+    background-color: white;
+    padding-left: 0.35em;
+    padding-right: 0.35em;
+    width: fit-content;
+}
+
+.card-item p {
+    margin: 0em;
+}
+
+.card-info {
+    display: flex;
+    flex-direction: column;
+    margin: 1em;
+}
+
+.card-info h4 {
+    margin: 0em;
+}
+
+.card-info-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 1em;
+    margin-bottom: 1.5em;
+}
+
+.card-info-description {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.card-info-description p {
+    font-size: 0.85em;
+    text-wrap: pretty;
+}
+
+.card-info-date {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 0.5em;
+    font-size: 0.8em;
+    color: gray;
+    padding-right: 1em;
+}
+
+.card-btn-done {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 1em;
 }

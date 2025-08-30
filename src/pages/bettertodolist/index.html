@@ -8,14 +8,14 @@
   </head>
   <body>
     <script src="./scripts/bettertodolistlogic.js" defer></script>
-    <main class="main-container">
+    <main class="main-container card-main-container">
 
         <div>
 
           <h1>Better To-do List</h1>
           <h3>Une nouvelle version de ma To-Do list</h3>
 
-          <div class="card-options">
+          <section class="card-options">
 
             <div>
 
@@ -26,14 +26,14 @@
               <div class="card-option-addCard">
                 <div class="card-option-item">
                   <label for="addCard-title">Nom de la carte</label>
-                  <input type="text" id="addCard-title">
+                  <input type="text" id="addCard-title" minlength="3" maxlength="30" required>
                 </div>
                 <div class="card-option-item">
                   <label for="addCard-desc">Description</label>
-                  <textarea rows="4" cols="35" id="addCard-desc"></textarea>
+                  <textarea rows="4" cols="35" id="addCard-desc" minlength="15" maxlength="350" required></textarea>
                 </div>
                 <div class="card-option-item">
-                  <label for="">Categorie</label>
+                  <label for="">Catégorie</label>
                   <select name="" class="option-category" id="addCard-category">
                   </select>
                 </div>
@@ -63,7 +63,7 @@
 
                 <div class="card-option-item">
                   <label for="">Nom de la catégorie</label>
-                  <input type="text" id="addCat-title">
+                  <input type="text" id="addCat-title" minlength="3" maxlength="15" required>
                   <button id="addCat-submit">Ajouter</button>
                 </div>
 
@@ -83,25 +83,25 @@
               </div>
 
               <div>
-                <p>Il restes X tâches non terminées !</p>
+                <p id="">Il restes X tâches non terminées !</p>
               </div>
 
               <br>
 
               <div>
-                <button>Supprimer toute les cartes</button>
+                <button id="delCard-submit">Supprimer toute les cartes</button>
                 <p>Attention : Cette action est définitive !</p>
               </div>
             </div>
 
-          </div>
+          </section>
         </div>
 
         <hr>
 
-        <div id="card-container">
+        <div>
 
-          <div class="card-filter">
+          <section class="card-filter">
             <h4>Filtre :</h4>
 
             <div>
@@ -142,11 +142,27 @@
                 <option value="">Date d'ajout descendante</option>
               </select>
             </div>
-          </div>
+          </section>
 
-          <div class="card-array">
-
-          </div>
+          <section id="card-container" class="card-array">
+            <div class="card-item">
+              <h3>titre</h3>
+              <span>╳</span>
+              <div class="card-info">
+                  <div class="card-info-labels">
+                    <h4>Catégorie :</h4><p>Bonjour</p>
+                    <h4>Prioritée :</h4><p>Haute</p>
+                  </div>
+                  <div class="card-info-description">
+                    <h4>Description :</h4>
+                    <p>aaaaaaaa aaaaa aaa aaaaaa a aa aaaa aaaaaaaa aaaaaa aaaaa aaa aaaaaaaaa aaaaa aaaa a aa aaaa aaaaa aaaa aaaaaa aaaa aaaaaaaaa aaaa a a aa aaaa aaaa a aaaa aaaa aaaaa a aaaa aa aaa aaa aaa aa  aaaaa a aa aaa aaaa aaaa aaaa aaaa aaaa a aaa aaaaaa aaaaa aaaaaa aaaaaa aaaaaa aaaaaaa aaaaa aa aaa aaaaa aaaa aa aaaa aaa aaa aaaa aaaaaaa aaa aaaaa aaa aaa</p>
+                  </div>
+                  <div class="card-info-date">
+                    <p>date</p>
+                  </div>
+              </div>
+            </div>
+          </section>
 
         </div>
     </main>
