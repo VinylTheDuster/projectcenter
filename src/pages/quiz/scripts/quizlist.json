@@ -1,0 +1,158 @@
+{
+    
+    "quiz0" : {
+        "question" : "Quel est la planète la plus proche du soleil ?",
+        "choices" : ["Vénus", "Jupiter", "Saturne", "Uranus", "Pluton", "Mercure", "Mars"],
+        "answer" : "Mercure"
+    },
+
+    "quiz1" : {
+        "question" : "Dans quel ville se trouve la Tour Eiffel ?",
+        "choices" : ["Paris", "Lisbone", "Dakar", "Sidney", "Versaille", "Londre", "Rio de Janeiro"],
+        "answer" : "Paris"
+    },
+
+    "quiz2" : {
+        "question" : "Quel est le langage utilisé principalement pour le développement de pages web avec HTML et CSS côté dynamique ?",
+        "choices" : ["PHP", "JavaScript", "C#", "C++", "Python", "Go", "Rust"],
+        "answer" : "JavaScript"
+    },
+
+    "quiz3" : {
+        "question" : "En quelle année a eu lieu la chute du mur de Berlin ?",
+        "choices" : ["1989", "1999", "1979", "1998", "1988", "1975", "1985"],
+        "answer" : "1989"
+    },
+
+    "quiz4" : {
+        "question" : "Qui a peint la Joconde ?",
+        "choices" : ["Léonard de Vinci", "Vincent Van Gogh", "Pablo Picasso", "Claude Monet", "Rembrandt", "Paul Cézanne", "Michel-Ange"],
+        "answer" : "Léonard de Vinci"
+    },
+
+    "quiz5" : {
+        "question" : "Quel est l’élément chimique dont le symbole est O ?",
+        "choices" : ["Or", "Organesson", "Osmium", "Oxygène", "Opale", "Odinite", "Omsite"],
+        "answer" : "Oxygène"
+    },
+
+    "quiz6" : {
+        "question" : "Dans le jeu vidéo Minecraft, quel est le nom du boss final principal ?",
+        "choices" : ["Ender Dragon", "Wither", "Ghast", "Pigmen", "Warden", "Elder Guardian", "Illusioner"],
+        "answer" : "Ender Dragon"
+    },
+
+    "quiz7" : {
+        "question" : "Combien de continents compte la planète Terre ?",
+        "choices" : ["4", "5", "6", "7", "8"],
+        "answer" : "7"
+    },
+
+    "quiz8" : {
+        "question" : "Quelle est la capitale du Japon ?",
+        "choices" : ["Tokyo", "Osaka", "Kyoto", "Hiroshima", "Nara", "Kobe", "Yokohama"],
+        "answer" : "Tokyo"
+    },
+
+    "quiz9" : {
+        "question" : "Qui a écrit la pièce Roméo et Juliette ?",
+        "choices" : ["William Shakespeare", "Charles Baudelaire", "Victor Hugo", "Molière", "Pierre Corneille", "Voltaire", "Étienne Jodelle"],
+        "answer" : "William Shakespeare"
+    },
+
+    "quiz10" : {
+        "question" : "Quelle est la capitale de l'Australie ?",
+        "choices" : ["Sydney", "Brisbane", "Melbourne", "Perth", "Canberra", "Adélaïde", "Darwin"],
+        "answer" : "Canberra"
+    },
+
+    "quiz11" : {
+        "question" : "Combien y a-t-il de joueurs dans une équipe de football sur le terrain ?",
+        "choices" : ["9", "10", "11", "12", "13", "14"],
+        "answer" : "11"
+    },
+
+    "quiz12" : {
+        "question" : "Quel est la monnaie officielle du Royaume-Uni ?",
+        "choices" : ["Livre sterling", "Euro", "Franc", "Rouble", "Dollar", "Won"],
+        "answer" : "Livre sterling"
+    },
+
+    "quiz13" : {
+        "question" : "Quel est le plus grand océan du monde ?",
+        "choices" : ["Océan Pacifique", "Océan Atlantique", "Océan Arctique", "Océan Austral", "Océan Indien"],
+        "answer" : "Océan Pacifique"
+    },
+
+    "quiz14" : {
+        "question" : "Quelle est la langue la plus parlée au monde (nativement) ?",
+        "choices" : ["Mandarin", "Anglais", "Français", "Hindi", "Arabe", "Russe", "Bengali", "Portugais"],
+        "answer" : "Mandarin"
+    },
+
+    "quiz15" : {
+        "question" : "Quel est l'astre la plus proche de la Terre ?",
+        "choices" : ["La Lune", "ISS", "Hubble", "Iridium"],
+        "answer" : "La Lune"
+    },
+
+    "quiz16" : {
+        "question" : "Quel est le métal liquide à température ambiante ?",
+        "choices" : ["Le mercure", "Le plomb", "Le gallium", "Le rubidium", "Le césium", "Le francium"],
+        "answer" : "Le mercure"
+    },
+
+    "quiz17" : {
+        "question" : "Combien de dents a un adulte en moyenne ?",
+        "choices" : ["30", "32", "34", "38", "28"],
+        "answer" : "32"
+    },
+
+    "quiz18" : {
+        "question" : "Quelle planète est surnommée 'la planète rouge' ?",
+        "choices" : ["Mars", "Saturne", "Jupiter", "Vénus", "Mercure"],
+        "answer" : "Mars"
+    },
+
+    "quiz19" : {
+        "question" : "Quel est l'organe qui pompe le sang dans le corps humain ?",
+        "choices" : ["Le cœur", "Les poumons", "Les reins", "Le pancréas", "13", "14"],
+        "answer" : "Le cœur"
+    },
+
+    "quiz20" : {
+        "question" : "Qui fut le premier empereur de Rome ?",
+        "choices" : ["Auguste", "Tibère", "Caligula", "Claude", "Néron"],
+        "answer" : "Auguste"
+    },
+
+    "quiz21" : {
+        "question" : "En quelle année a débuté la Première Guerre mondiale ?",
+        "choices" : ["1914", "1904", "1918", "1924", "1932"],
+        "answer" : "1914"
+    },
+
+    "quiz22" : {
+        "question" : "Qui a découvert l’Amérique en 1492 ?",
+        "choices" : ["Christophe Colomb", "Gil Eanes", "Juan Sebastian Elcano", "Antoine Bruny", "Erik le Rouge"],
+        "answer" : "Christophe Colomb"
+    },
+
+    "quiz23" : {
+        "question" : "Quelle reine de France fut guillotinée en 1793 ?",
+        "choices" : ["Marie de Médicis", "Marguerite de France", "Anne d'Autriche", "Marie Leszczyńska", "Marie-Antoinette d'Autriche", "Marie-Thérèse d'Autriche"],
+        "answer" : "Marie-Antoinette d'Autriche"
+    },
+
+    "quiz24" : {
+        "question" : "Qui était président des États-Unis lors du débarquement en Normandie en 1944 ?",
+        "choices" : ["Calvin Coolidge", "Herbert Hoover", "Franklin D. Roosevelt", "Harry S. Truman", "Dwight D. Eisenhower"],
+        "answer" : "Fanklin D. Roosevelt"
+    },
+
+    "quiz25" : {
+        "question" : "Dans Matrix, quel est le vrai prénom de Neo ?",
+        "choices" : ["Thomas", "John", "Jack", "James", "Terrance", "Travis"],
+        "answer" : "Thomas"
+    }
+}

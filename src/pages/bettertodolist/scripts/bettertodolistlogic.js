@@ -1,4 +1,3 @@
-
 // => variables
 
 const cardContainer = document.getElementById('card-container');
@@ -14,9 +13,9 @@ const delCardBtnSubmit = document.getElementById('delCard-submit');
 let currentCardData = getContentFromLocalStorage();
 let currentCategory = [];
 
-let currentCardIterations = [];
-
 // => classes & functions
+
+/// classes
 
 class cardTemplate {
 
@@ -31,6 +30,8 @@ class cardTemplate {
         this.date = date;
     }
 }
+
+/// localStorage manipulations
 
 function getContentFromLocalStorage() {
 
@@ -52,13 +53,15 @@ function getCategoryFromLocalStorage() {
     for (let i = 0; i < localStorage.length; i++) {
 
         let storedData = localStorage.getItem(i);
+
+        if (!storedData) continue;
+
         let inputedCategory = JSON.parse(storedData).category;
 
         if (!currentCategory.includes(inputedCategory)) {
             currentCategory.push(JSON.parse(storedData).category);
         }
     }
-
 }
 
 function updateLocalStorage() {
@@ -72,6 +75,41 @@ function updateLocalStorage() {
     console.log(localStorage);
     initializeCardContainer();
 }
+
+function reorganizeLocalStorage() {
+
+    let newLocalStorage = [];
+
+    for (let i = 0; i < localStorage.length; i++) {
+
+        let key = localStorage.key(i);
+        let value = localStorage.getItem(key);
+
+        if (value !== null) {
+
+            newLocalStorage.push(value);
+        }
+    }
+
+    localStorage.clear();
+
+    if (newLocalStorage.length > 0) {
+
+        newLocalStorage.forEach((value, i) => {
+
+            let parsedValue = JSON.parse(value);
+            parsedValue.id = i;
+
+            let newValue = JSON.stringify(parsedValue);
+            localStorage.setItem(i, newValue);
+        });
+    }
+
+    getContentFromLocalStorage();
+    initializeCardContainer();
+}
+
+/// cards creation and initialization
 
 function createNewCard(title, category, description, priority) {
 
@@ -102,7 +140,7 @@ function addCardToVariables(cardToAdd) {
 
 // categories manipulation functions
 
-function addNewCategory(category) {
+function addNewCategory() {
 
     const catTitle = document.getElementById('addCat-title');
 
@@ -118,22 +156,32 @@ function addNewCategory(category) {
 
 function deleteCategory() {
 
-    const delCatTitle = document.getElementById('delCat-title').value;
+    const delCatTitle = document.getElementById('delCat-title');
+
+    console.log(delCatTitle.value);
 
     let isDeletable = () => {
 
-        for (let i = 0; i < localStorage.length; i++) {
+        if (localStorage.length == 0) {
+            return true;
+        } else {
 
-            let category = JSON.stringify(currentCardData[i]).category;
+            for (let i = 0; i < localStorage.length; i++) {
+        
+                let category = JSON.parse(currentCardData[i]).category;
 
-            if (category == delCatTitle) {
-                return true;
+                if (category == delCatTitle.value) {
+                    console.log('false');
+                    return false;
+                }
             }
         }
+
+        return true;
     }
 
-    if (delCatTitle && !isDeletable) {
-        currentCategory.pop(delCatTitle);
+    if (delCatTitle.value != "none" && isDeletable()) {
+        currentCategory.pop(delCatTitle.value);
         return initializeCategoryFields();
     }
 
@@ -143,13 +191,17 @@ function deleteCategory() {
 function initializeCategoryFields() {
     
     const categorySelect = document.querySelectorAll('.option-category');
+
     getCategoryFromLocalStorage();
 
     categorySelect.forEach((x) => {
 
-        x.innerHTML = `<option value="">--Choisissez une catégorie--</option>`
+        x.innerHTML = `<option value="none">--Choisissez une catégorie--</option>`
 
         if (currentCategory && currentCategory.length > 0) {
+
+            console.log(currentCategory);
+
             for (let i = 0; i < currentCategory.length; i++) {
 
                 x.innerHTML += `
@@ -179,7 +231,7 @@ function initializeCardContainer() {
         cardContainer.innerHTML += `
         <div id="${'card' + data.id}" class="card-item">
             <h3>${data.title}</h3>
-            <span id="${'span' + data.id} class="delCard">╳</span>
+            <span id="${'span' + data.id}" class="delCard">╳</span>
             <div class="card-info">
                 <div class="card-info-labels">
                     <h4>Catégorie :</h4><p>${data.category}</p>
@@ -190,11 +242,11 @@ function initializeCardContainer() {
                     <p>${data.description}</p>
                 </div>
             </div>
-            <div class="card-info-date">
-                <p>${data.date}</p>
-            </div>
             <div class="card-btn-done">
                 <button>Clôturer la tâche</button>
+            </div>
+            <div class="card-info-date">
+                <p>${data.date}</p>
             </div>
         </div>`;
 
@@ -203,15 +255,13 @@ function initializeCardContainer() {
         // initialize events listeners for deleting card with the span X
         let currentSpan = document.getElementById('span' + data.id);
 
-        currentSpan.addEventListener('click'), function () {
+        currentSpan.addEventListener('click', function () {
 
             localStorage.removeItem(key);
             this.parentNode.remove();
-
-            //function to reorganize localstorage
-
-            getContentFromLocalStorage();
-        };
+            
+            reorganizeLocalStorage();
+        });
     }
     
     if (!hasLooped) {
@@ -226,11 +276,18 @@ function initializeCardContainer() {
 
 function deleteAllCard() {
 
-    localStorage.clear();
-    currentCategory = [];
+    if(Object.keys(currentCardData).length !== 0) {
+
+        if (confirm('Êtes-vous sûr de vouloir supprimer toutes les cartes ? Vous ne pourrez plus les restaurées après coup.')) {
+            localStorage.clear();
+            currentCategory = [];
     
-    initializeCardContainer();
-    initializeCategoryFields();
+            initializeCardContainer();
+            initializeCategoryFields();
+        }
+    } else {
+        alert('Aucune carte à supprimée détectée.')
+    }
 }
 
 // => actions & eventListeners
@@ -239,10 +296,6 @@ initializeCategoryFields();
 initializeCardContainer();
 
 console.log(getContentFromLocalStorage());
-
-function addAllEvents () {
-    
-}
 
 cardBtnSubmit.addEventListener('click', () => { 
 
