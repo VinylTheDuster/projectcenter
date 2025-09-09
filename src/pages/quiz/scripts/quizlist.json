@@ -116,7 +116,7 @@
 
     "quiz19" : {
         "question" : "Quel est l'organe qui pompe le sang dans le corps humain ?",
-        "choices" : ["Le cœur", "Les poumons", "Les reins", "Le pancréas", "13", "14"],
+        "choices" : ["Le cœur", "Les poumons", "Les reins", "Le pancréas"],
         "answer" : "Le cœur"
     },
 
